@@ -54,14 +54,7 @@ void Vector::resize(int new_size) {
 int Vector::get_size() const {
     return size;
 }
-/*
-void Vector::fillRandom(int Min, int Max) {
-    srand(time(nullptr));
-    for (int i = 0; i < size; ++i) {
-        elements[i] = rand() % (Max - Min) + Min;
-    }
-}
-*/
+
 void Vector::fill_random(int v_size, int max_el) {
     srand(time(nullptr));
     for (int i = 1; i <= v_size; i++) {
@@ -85,7 +78,7 @@ const int& Vector::operator[](int index) const {
     return elements[index];
 }
 
-// Ïåðåãðóçêà îïåðàòîðîâ ââîäà/âûâîäà
+// ÃÃ¥Ã°Ã¥Ã£Ã°Ã³Ã§ÃªÃ  Ã®Ã¯Ã¥Ã°Ã Ã²Ã®Ã°Ã®Ã¢ Ã¢Ã¢Ã®Ã¤Ã /Ã¢Ã»Ã¢Ã®Ã¤Ã 
 std::ostream& operator<<(std::ostream& os, const Vector& vec) {
     os << "[";
     for (int i = 0; i < vec.size; ++i) {
